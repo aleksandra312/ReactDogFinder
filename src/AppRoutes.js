@@ -8,7 +8,7 @@ function AppRoutes({ dogs }) {
     <Routes>
       <Route exact path="/dogs" element={<DogList dogs={dogs} />} />
       <Route path="/dogs/:name" element={<DogDetails dogs={dogs} />} />
-      <Route element={<Navigate to="/dogs" />} />
+      <Route path="*" element={<Navigate to="/dogs" />} />
     </Routes>
   );
 }
